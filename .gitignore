@@ -1,0 +1,44 @@
+# Byte-compiled Python files
+*.py[cod]
+
+# Log files
+*.log
+
+# Database files
+db.sqlite3
+
+# Django files
+*.pot
+*.po
+*.mo
+
+# Virtualenv files
+.venv
+env
+venv
+
+# IDE files
+.vscode
+.pycharm
+.idea
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Django migrations
+*/migrations/*.pyc
+
+# Static files
+static/
+
+# Media files
+*/media/
+
+# Node modules (if using)
+node_modules
+
+# Other
+*.env
+__pycache__
+__lab
