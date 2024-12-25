@@ -19,3 +19,20 @@ class Account(BaseModel):
         default="member",
     )
     is_active = models.BooleanField(default=False)
+
+
+class Commitment(BaseModel):
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)
+    date = models.DateField()
+    position = models.ForeignKey("Position", on_delete=models.SET_NULL)
+
+
+class Position(BaseModel):
+    title = models.CharField(max_length=100)
+
+
+class OpenDate(BaseModel):
+    account = models.ForeignKey(Account, on_delete=models.CASCADE)
+    date1 = models.DateField()
+    date2 = models.DateField(null=True, blank=True)
+    date3 = models.DateField(null=True, blank=True)
